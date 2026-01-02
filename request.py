@@ -7,6 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 from trans import simple_translate
 from parse_to_json import parse_to_json
+from smart_parser import smart_parse
 
 client = OpenAI(
   base_url="https://integrate.api.nvidia.com/v1",
@@ -54,8 +55,8 @@ Here are similar dialogues with their surrounding context for reference:
         return text_to_translate
 
 def translate_file(input_file, output_file, target_language="Vietnamese", rpm=30, max_workers=5):
-    # Parse to JSON first
-    data = parse_to_json(input_file)
+    # Parse to JSON with smart detection
+    data = smart_parse(input_file)
     dialogues = data['dialogues']
     
     translations = {}
