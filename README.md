@@ -3,7 +3,7 @@ when need to use:
 1. cd into the file
 2. .venv\Scripts\Activate.ps1
 3. pip install -r requirements.txt
-4. lastly, you will be able to happilly run the '''interface.py''' to continue with your task
+4. lastly, you will be able to happilly run the interface.py to continue with your task
 you will need python on your computer to do this
 
 the input file should be in this form :
