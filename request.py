@@ -42,7 +42,7 @@ Here are similar dialogues with their surrounding context for reference:
         ]
         
         completion = client.chat.completions.create(
-            model="deepseek-ai/deepseek-v3.1",
+            model="deepseek-ai/deepseek-v3.1-terminus",
             messages=messages,
             temperature=0.3,
             top_p=0.9,
